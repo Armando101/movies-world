@@ -1,6 +1,28 @@
 {
   "version": 1,
   "projects": {
+    "frontend-onboarding-data-access": {
+      "root": "libs/frontend/onboarding/data-access",
+      "sourceRoot": "libs/frontend/onboarding/data-access/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/frontend/onboarding/data-access/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/onboarding/data-access"],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "onboarding": {
       "projectType": "application",
       "root": "apps/onboarding",
