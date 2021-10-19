@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "frontend-onboarding-data-access": {
+      "tags": []
+    },
     "onboarding": {
       "tags": []
     },
