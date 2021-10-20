@@ -1,6 +1,31 @@
 {
   "version": 1,
   "projects": {
+    "feature-onboarding-features-search": {
+      "projectType": "library",
+      "root": "libs/feature/onboarding/features/search",
+      "sourceRoot": "libs/feature/onboarding/features/search/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/onboarding/features/search"],
+          "options": {
+            "jestConfig": "libs/feature/onboarding/features/search/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/onboarding/features/search/src/**/*.ts",
+              "libs/feature/onboarding/features/search/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-onboarding-data-access": {
       "root": "libs/frontend/onboarding/data-access",
       "sourceRoot": "libs/frontend/onboarding/data-access/src",
@@ -19,6 +44,83 @@
           "options": {
             "jestConfig": "libs/frontend/onboarding/data-access/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "frontend-onboarding-features-home": {
+      "projectType": "library",
+      "root": "libs/frontend/onboarding/features/home",
+      "sourceRoot": "libs/frontend/onboarding/features/home/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/onboarding/features/home"],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/features/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/onboarding/features/home/src/**/*.ts",
+              "libs/frontend/onboarding/features/home/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "frontend-onboarding-features-movie-detail": {
+      "projectType": "library",
+      "root": "libs/frontend/onboarding/features/movie-detail",
+      "sourceRoot": "libs/frontend/onboarding/features/movie-detail/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/frontend/onboarding/features/movie-detail"
+          ],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/features/movie-detail/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/onboarding/features/movie-detail/src/**/*.ts",
+              "libs/frontend/onboarding/features/movie-detail/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "frontend-onboarding-features-search": {
+      "projectType": "library",
+      "root": "libs/frontend/onboarding/features/search",
+      "sourceRoot": "libs/frontend/onboarding/features/search/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/onboarding/features/search"],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/features/search/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/onboarding/features/search/src/**/*.ts",
+              "libs/frontend/onboarding/features/search/src/**/*.html"
+            ]
           }
         }
       }

@@ -27,7 +27,19 @@
     ]
   },
   "projects": {
+    "feature-onboarding-features-search": {
+      "tags": []
+    },
     "frontend-onboarding-data-access": {
+      "tags": []
+    },
+    "frontend-onboarding-features-home": {
+      "tags": []
+    },
+    "frontend-onboarding-features-movie-detail": {
+      "tags": []
+    },
+    "frontend-onboarding-features-search": {
       "tags": []
     },
     "frontend-onboarding-utilities-pipes": {
