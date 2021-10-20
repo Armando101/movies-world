@@ -23,6 +23,31 @@
         }
       }
     },
+    "frontend-onboarding-utilities-pipes": {
+      "projectType": "library",
+      "root": "libs/frontend/onboarding/utilities/pipes",
+      "sourceRoot": "libs/frontend/onboarding/utilities/pipes/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/onboarding/utilities/pipes"],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/utilities/pipes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/onboarding/utilities/pipes/src/**/*.ts",
+              "libs/frontend/onboarding/utilities/pipes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "onboarding": {
       "projectType": "application",
       "root": "apps/onboarding",

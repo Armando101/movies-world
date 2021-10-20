@@ -30,6 +30,9 @@
     "frontend-onboarding-data-access": {
       "tags": []
     },
+    "frontend-onboarding-utilities-pipes": {
+      "tags": []
+    },
     "onboarding": {
       "tags": []
     },

@@ -17,6 +17,9 @@
     "paths": {
       "@olimpo/frontend/onboarding/data-access": [
         "libs/frontend/onboarding/data-access/src/index.ts"
+      ],
+      "@olimpo/frontend/onboarding/utilities/pipes": [
+        "libs/frontend/onboarding/utilities/pipes/src/index.ts"
       ]
     }
   },
