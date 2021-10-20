@@ -1,1 +1,1 @@
-export * from './lib/frontend-onboarding-utilities-pipes.module';
+export * from './lib/runtime.module';
