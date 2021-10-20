@@ -1,0 +1,62 @@
+// -------
+// Colors
+// -------
+
+$color-black: #000000;
+
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-colors
+/// @type color
+$color-gray-600: #5b5b5b;
+$color-gray-700: #333333;
+
+$color-gray-900: #171718;
+
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-colors
+/// @type color
+$color-white: #ffffff;
+
+$map-black: (
+  'value': $color-black,
+  'contrast': $color-white,
+);
+
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-colors
+/// @type map
+/// @require $color-gray-600
+/// @require $color-white
+/// @prop {color} 'value' [#5b5b5b]
+/// @prop {color} 'contrast' [#ffffff]
+$map-gray-600: (
+  'value': $color-gray-600,
+  'contrast': $color-white,
+);
+
+$map-gray-900: (
+  'value': $color-gray-900,
+  'contrast': $color-white,
+);
+
+$map-white: (
+  'value': $color-white,
+  'contrast': $color-gray-700,
+);
+
+// --------------
+// Theme palettes
+// --------------
+
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-colors
+/// @type map
+/// @prop {color} 'text-light' [#5b5b5b]
+$palette: (
+  'text-light': $map-gray-600,
+  'black': $map-black,
+  'dark': $map-gray-900,
+  'white': $map-white,
+);
+
+$color-palette: $palette;

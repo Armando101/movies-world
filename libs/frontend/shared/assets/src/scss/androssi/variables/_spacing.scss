@@ -1,0 +1,53 @@
+// -------
+// Spacing
+// -------
+
+/// Spacing base size
+/// @group basic-spacing
+/// @type number
+$spacer: 1rem !default;
+
+/// Spacing sizes
+/// @group basic-spacing
+/// @type map
+/// @prop {number} 0 [0]
+/// @prop {number} 1 [0.25rem]
+/// @prop {number} 2 [0.5rem]
+/// @prop {number} 3 [1rem]
+/// @prop {number} 4 [1.5rem]
+/// @prop {number} 5 [2rem]
+/// @prop {number} 6 [2.5rem]
+/// @prop {number} 7 [3rem]
+/// @prop {number} 8 [3.5rem]
+/// @prop {number} 9 [4rem]
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 3.5,
+  9: $spacer * 4,
+);
+
+// ---------------
+// Elements margin
+// ---------------
+
+/// Default margin-bottom for heading tags
+/// @group basic-spacing
+/// @type number
+$headings-margin-bottom: $spacer / 2 !default;
+
+/// Default margin-botton for paragraph tag
+/// @group basic-spacing
+/// @type number
+$paragraph-margin-bottom: $spacer !default;
+
+/// Default margin-bottom for label tag
+/// @group basic-spacing
+/// @type number
+$label-margin-bottom: $spacer / 2 !default;

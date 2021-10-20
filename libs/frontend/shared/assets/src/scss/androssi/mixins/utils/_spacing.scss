@@ -1,0 +1,12 @@
+@function get-space($size) {
+  $space-size: map-get($spacers, $size);
+  @return $space-size;
+}
+
+@mixin _add-space-up($prop-name, $spaces, $breakpoint: 'xs') {
+  #{$prop-name}: get-space($spaces);
+}
+
+@mixin add-padding($spaces) {
+  @include _add-space-up('padding', $spaces, 'xs');
+}

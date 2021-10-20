@@ -1,1 +1,6 @@
-<p>movie-card works!</p>
+<div class="card">
+    <img [src]=imageUrl [alt]="title" loading="lazy" [title]="title" height="384" aria-label="movie card" width="230">
+    <div class="card_overlay">
+        <p>{{overview}}</p>
+    </div>
+</div>

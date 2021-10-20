@@ -1,0 +1,9 @@
+// ----
+// Root
+// ----
+
+@mixin reboot-root {
+  :root {
+    @include define-palette-variables;
+  }
+}
