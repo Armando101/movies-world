@@ -1,1 +1,1 @@
-export * from './lib/frontend-onboarding-features-home.module';
+export * from './lib/home.module';

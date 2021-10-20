@@ -1,1 +1,1 @@
-export * from './lib/frontend-onboarding-components.module';
+export * from './lib/movie-card.module';
