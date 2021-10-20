@@ -1,1 +1,1 @@
-export * from './lib/movie-card.module';
+export * from './lib/movie-card/movie-card.module';
