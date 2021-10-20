@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "feature-onboarding-features-search": {
+      "tags": []
+    },
     "frontend-onboarding-data-access": {
       "tags": []
     },
@@ -34,6 +37,9 @@
       "tags": []
     },
     "frontend-onboarding-features-movie-detail": {
+      "tags": []
+    },
+    "frontend-onboarding-features-search": {
       "tags": []
     },
     "frontend-onboarding-utilities-pipes": {

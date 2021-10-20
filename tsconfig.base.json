@@ -24,6 +24,9 @@
       "@olimpo/frontend/onboarding/features/movie-detail": [
         "libs/frontend/onboarding/features/movie-detail/src/index.ts"
       ],
+      "@olimpo/frontend/onboarding/features/search": [
+        "libs/frontend/onboarding/features/search/src/index.ts"
+      ],
       "@olimpo/frontend/onboarding/utilities/pipes": [
         "libs/frontend/onboarding/utilities/pipes/src/index.ts"
       ]
