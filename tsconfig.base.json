@@ -21,6 +21,9 @@
       "@olimpo/frontend/onboarding/features/home": [
         "libs/frontend/onboarding/features/home/src/index.ts"
       ],
+      "@olimpo/frontend/onboarding/features/movie-detail": [
+        "libs/frontend/onboarding/features/movie-detail/src/index.ts"
+      ],
       "@olimpo/frontend/onboarding/utilities/pipes": [
         "libs/frontend/onboarding/utilities/pipes/src/index.ts"
       ]

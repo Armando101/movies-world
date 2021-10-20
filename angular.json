@@ -48,6 +48,33 @@
         }
       }
     },
+    "frontend-onboarding-features-movie-detail": {
+      "projectType": "library",
+      "root": "libs/frontend/onboarding/features/movie-detail",
+      "sourceRoot": "libs/frontend/onboarding/features/movie-detail/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/frontend/onboarding/features/movie-detail"
+          ],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/features/movie-detail/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/onboarding/features/movie-detail/src/**/*.ts",
+              "libs/frontend/onboarding/features/movie-detail/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-onboarding-utilities-pipes": {
       "projectType": "library",
       "root": "libs/frontend/onboarding/utilities/pipes",
