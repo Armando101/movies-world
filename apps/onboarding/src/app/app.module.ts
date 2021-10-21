@@ -6,10 +6,17 @@ import { AppComponent } from './app.component';
 import {
   MovieCardModule,
   HeroModule,
+  CircleProgressBarModule,
 } from '@olimpo/frontend/onboarding/components';
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule, MovieCardModule, HeroModule],
+  imports: [
+    BrowserModule,
+    RouterModule,
+    MovieCardModule,
+    HeroModule,
+    CircleProgressBarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -7,4 +7,4 @@ import { CircleProgressBarComponent } from './circle-progress-bar.component';
   imports: [CommonModule],
   exports: [CircleProgressBarComponent],
 })
-export class CicleProgressBarModule {}
+export class CircleProgressBarModule {}

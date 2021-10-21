@@ -1,0 +1,43 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+svg,
+circle {
+  width: 9.375rem;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  &_value {
+    @include add-font-size(3.5);
+    &-span {
+      @include add-font-size(1.25);
+    }
+  }
+}
+
+circle {
+  fill: white;
+  height: 9.375rem;
+  transform: translate(5px, 5px);
+  stroke-width: 10;
+  stroke-dasharray: 440;
+  stroke-linecap: round;
+}
+
+h4 {
+  margin-inline-start: 1rem;
+  @include add-font-size(1.25);
+}
+
+@media screen and (min-width: 768px) {
+  .progress {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  h4 {
+    @include add-font-size(1.5);
+  }
+}

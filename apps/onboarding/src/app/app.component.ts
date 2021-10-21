@@ -9,9 +9,7 @@ export class AppComponent {
   title = 'onboarding';
 
   data = {
-    backdropUrl:
-      'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/6MKr3KgOLmzOP6MSuZERO41Lpkt.jpg',
-    title: 'Cruella',
-    tagline: 'Hello Cruel World',
+    value: 3,
+    title: 'User Score',
   };
 }

@@ -6,8 +6,8 @@ img {
 }
 
 .hero {
-  position: relative;
   height: 35.625rem;
+  position: relative;
   &_overlay {
     align-items: center;
     display: flex;
@@ -19,8 +19,8 @@ img {
     @include set-positions(absolute);
     & h2 {
       @include add-font-family('title');
-      @include add-font-size(3);
       @include add-font-weight('bold');
+      @include add-font-size(3);
     }
     & p {
       font-style: italic;
@@ -28,9 +28,10 @@ img {
     }
   }
 }
+
 img {
-  width: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 @media screen and (min-width: 1440px) {
