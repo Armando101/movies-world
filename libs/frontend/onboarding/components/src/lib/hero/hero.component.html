@@ -1,1 +1,7 @@
-<p>hero works!</p>
+<section class="hero" aria-label="hero">
+    <img [src]="backdropUrl" [alt]="title" [title]="title" loading="lazy">
+    <div class="hero_overlay">
+        <h2>{{title}}</h2>
+        <p>{{tagline}}</p>    
+    </div>
+</section>
