@@ -1,0 +1,13 @@
+/// Convert a hexadecimal color to RGB format
+/// @group basic-colors
+/// @param {color} $hex-color - Color in hexadecimal format
+/// @example scss
+///   hex-to-rgb(#4c84e0)
+///   // rgb(76, 132, 224)
+///
+
+@function hex-to-rgb($hex-color) {
+  $color-rgb: '#{red($hex-color)},#{green($hex-color)},#{blue($hex-color)}';
+
+  @return #{$color-rgb};
+}

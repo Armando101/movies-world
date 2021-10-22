@@ -1,0 +1,19 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.card {
+  align-items: center;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  @include add-bg-color('medium-tint');
+  @include add-shadow(2, 2);
+  & h3 {
+    @include add-font-size(1.25);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card h3 {
+    @include add-font-size(1.5);
+  }
+}

@@ -1,1 +1,1 @@
-export * from './lib/frontend-onboarding-features-search.module';
+export * from './lib/search.module';

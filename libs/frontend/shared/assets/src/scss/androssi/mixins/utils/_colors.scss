@@ -1,0 +1,63 @@
+// -------
+// Colors
+// -------
+
+@function get-color-var($color-key, $color-type: 'value', $color-rgb: false) {
+  $sufix: if($color-type== 'value', '', '-#{$color-type}');
+  $sufix: if($color-rgb, '#{$sufix}-rgb', $sufix);
+
+  @return '--#{$color-key}#{$sufix}';
+}
+
+@function get-color($color-key, $color-type: 'value') {
+  $color-name: get-color-var($color-key, $color-type);
+
+  @return var(#{$color-name});
+}
+
+@function get-color-rgba($color-key, $color-type: 'value', $alpha: 1) {
+  $color-name: get-color-var($color-key, $color-type, true);
+  $color-var: var(#{$color-name});
+
+  @return if($alpha==1, rgb($color-var), rgba($color-var, $alpha));
+}
+
+@mixin add-bg-color-rgba($color-key, $alpha: 1) {
+  background-color: get-color-rgba($color-key, 'value', $alpha);
+}
+
+@mixin add-color($color-key, $color-type: 'value') {
+  color: get-color($color-key, $color-type);
+}
+
+/// Add background-color property by color-key
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-colors
+/// @param {string} $color-key - Color key
+/// @param {string} $color-type ['value'] - Color type
+/// @require {function} get-color
+/// @since 1.0.0
+/// @example scss - Add background-color property with the color 'white'
+///   @include add-bg-color('white');
+///   // background-color: var('--white');
+/// @example scss - Add background-color property with the contrast color of 'secondary'
+///   @include add-bg-color('secondary', 'contrast');
+///   // background-color: var('--secondary-contrast');
+///
+@mixin add-bg-color($color-key, $color-type: 'value') {
+  background-color: get-color($color-key, $color-type);
+}
+
+@mixin define-palette-variables() {
+  @each $color-key, $color-map in $color-palette {
+    @each $color-type, $color-value in $color-map {
+      $color-name: get-color-var($color-key, $color-type);
+      #{$color-name}: $color-value;
+
+      @if ($color-type == 'value') {
+        $color-name-rgb: get-color-var($color-key, $color-type, true);
+        #{$color-name-rgb}: hex-to-rgb($color-value);
+      }
+    }
+  }
+}

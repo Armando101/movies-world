@@ -1,0 +1,46 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.hero_overlay,
+img {
+  height: 100%;
+}
+
+.hero {
+  height: 35.625rem;
+  position: relative;
+  &_overlay {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    @include add-bg-color-rgba('text-light', 0.45);
+    @include add-color('white');
+    @include set-positions(absolute);
+    & h2 {
+      @include add-font-family('title');
+      @include add-font-weight('bold');
+      @include add-font-size(3);
+    }
+    & p {
+      font-style: italic;
+      @include add-font-size(1.5);
+    }
+  }
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero_overlay {
+    & h2 {
+      @include add-font-size(5);
+    }
+    & p {
+      @include add-font-size(3);
+    }
+  }
+}

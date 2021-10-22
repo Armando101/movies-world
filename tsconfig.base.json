@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@olimpo/frontend/onboarding/components": [
+        "libs/frontend/onboarding/components/src/index.ts"
+      ],
       "@olimpo/frontend/onboarding/data-access": [
         "libs/frontend/onboarding/data-access/src/index.ts"
       ],

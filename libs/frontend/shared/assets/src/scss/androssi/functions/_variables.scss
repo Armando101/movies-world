@@ -1,0 +1,7 @@
+@function to-css-var($key) {
+  @return --#{$key};
+}
+
+@function get-css-var($key) {
+  @return var(to-css-var($key));
+}

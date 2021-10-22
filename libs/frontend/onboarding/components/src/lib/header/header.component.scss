@@ -1,0 +1,55 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+header {
+  @include add-padding(3);
+  @include add-padding(2, 'padding-block-start');
+  & .menu {
+    align-items: center;
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-between;
+    & h2 {
+      @include add-color('text-light');
+      @include add-font-weight('bold');
+    }
+  }
+
+  & a {
+    display: block;
+    text-decoration: none;
+    @include add-color('text-light');
+    @include add-font-size(1.25);
+  }
+
+  & img {
+    cursor: pointer;
+    width: 2rem;
+  }
+}
+.router-link-active {
+  @include add-color('primary');
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    & img {
+      @include add-margin(3, 'margin-inline-start');
+    }
+    & .menu {
+      justify-content: start;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    align-items: center;
+    display: flex;
+    & a {
+      @include add-margin(3, 'margin-inline-start');
+    }
+    & img {
+      display: none;
+    }
+  }
+}

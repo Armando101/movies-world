@@ -1,1 +1,1 @@
-export * from './lib/frontend-onboarding-features-movie-detail.module';
+export * from './lib/movie-detail.module';

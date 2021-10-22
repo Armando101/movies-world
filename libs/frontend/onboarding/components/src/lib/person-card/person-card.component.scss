@@ -1,0 +1,30 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.card {
+  display: flex;
+  @include add-padding(2);
+  @include add-shadow(2, 2);
+  & img {
+    height: 3.75rem;
+    @include add-bg-color('text-light');
+    @include add-size(7);
+  }
+  &_info {
+    @include add-padding(2);
+    @include add-padding(3, 'padding-inline-start');
+    & h3 {
+      @include add-font-size(1.5);
+      @include add-font-weight('bold');
+    }
+    & p {
+      @include add-color('text-light');
+      @include add-font-size(1);
+      @include add-font-weight('light');
+    }
+  }
+}
+
+h3,
+p {
+  @include add-margin(1, 'margin-block');
+}

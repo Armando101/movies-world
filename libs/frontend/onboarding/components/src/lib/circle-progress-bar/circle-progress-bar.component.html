@@ -1,0 +1,15 @@
+<div class="progress" aria-label="circle progress bar">
+    <svg>
+        <circle attr.stroke="{{ color }}" [ngStyle]="{ 'stroke-dashoffset': 440 - (440 * (value * 10)) / 100 }" cx="70"
+            cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="60">
+        </circle>
+
+        <text class="progress_value" attr.x="{{ sizeX }}" y="90">
+            {{ value }}
+        </text>
+        <text class="progress_value-span" x="100" y="90">/10</text>
+    </svg>
+
+    <h4>{{ title }}</h4>
+</div>

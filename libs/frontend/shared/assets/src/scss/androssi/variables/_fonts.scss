@@ -1,0 +1,280 @@
+// ----------
+// Typography
+// ----------
+
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type string
+$prefix-font: 'font';
+
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type string
+$prefix-font-fallback: 'font-fallback';
+
+/// Font families
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type map
+/// @prop {string} 'default' ['Roboto']
+/// @prop {string} 'title' ['nokasemibold']
+$font-families: (
+  'default': 'Roboto',
+  'title': 'nokasemibold',
+);
+
+/// Default fallback fonts (sans-serif)
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type list
+$font-fallback-sans-serif: (
+  '-apple-system',
+  'BlinkMacSystemFont',
+  'Segoe UI',
+  'Helvetica Neue',
+  'Arial',
+  'Noto Sans',
+  'sans-serif',
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji'
+);
+
+/// Default fallback fonts (monospace)
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type list
+$font-fallback-monospace: (
+  'SFMono-Regular',
+  'Menlo',
+  'Monaco',
+  'Consolas',
+  'Liberation Mono',
+  'Courier New',
+  'monospace'
+);
+
+/// Default fallback fonts
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type list
+$font-fallbacks: (
+  'sans-serif': $font-fallback-sans-serif,
+  // 'monospace': $font-fallback-monospace
+);
+
+// ---------
+// Font size
+// ---------
+
+/// Default font size in rem
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type number
+$font-size-base: 1rem !default;
+
+/// Default font size in pixels
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type number
+$font-size-base-px: 16px !default;
+
+// -----------
+// Font weight
+// -----------
+
+/// Default font weights
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type map
+/// @prop {number} 'light' [300]
+/// @prop {number} 'normal' [400]
+/// @prop {number} 'semibold' [500]
+/// @prop {number} 'bold' [700]
+$font-weights: (
+  'light': 300,
+  'normal': 400,
+  'semibold': 500,
+  'bold': 700,
+);
+
+// -----------
+// Line height
+// -----------
+
+/// Default line height
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type number
+$line-height-base: 1 !default;
+
+// ----------------
+// Local fonts path
+// ----------------
+
+/// Fonts local path
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type string
+$fonts-path-local: '~libs/frontend/shared/assets/src/fonts/' !default;
+
+/// Fonts external static source
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type string
+$fonts-path-static: 'https://static.kavak.services/assets/fonts/' !default;
+
+// ---------------------
+// Roboto unicode ranges
+// ---------------------
+
+/// Roboto unicode ranges by language type
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-fonts
+/// @type map
+/// @prop {list} 'cyrillic-ex' [( 'U+0460-052F','U+1C80-1C88', 'U+20B4', ...)]
+/// @prop {list} 'cyrillic' [( 'U+0400-045F','U+0490-0491', 'U+04B0-04B1', ...)]
+/// @prop {string} 'greek-ext': 'U+1F00-1FFF'
+/// @prop {string} 'greek': 'U+0370-03FF'
+/// @prop {list} 'vietnamese' [( 'U+0102-0103','U+0110-0111', 'U+0128-0129', ...)]
+/// @prop {list} 'latin-ext' [( 'U+0100-024F','U+0259', 'U+1E00-1EFF', ...)]
+/// @prop {list} 'latin' [( 'U+0000-00FF','U+0131', 'U+0152-0153', ...)]
+$roboto-unicode-ranges: (
+  'cyrillic-ext': (
+    'U+0460-052F',
+    'U+1C80-1C88',
+    'U+20B4',
+    'U+2DE0-2DFF',
+    'U+A640-A69F',
+    'U+FE2E-FE2F',
+  ),
+  'cyrillic': (
+    'U+0400-045F',
+    'U+0490-0491',
+    'U+04B0-04B1',
+    'U+2116',
+  ),
+  'greek-ext': 'U+1F00-1FFF',
+  'greek': 'U+0370-03FF',
+  'vietnamese': (
+    'U+0102-0103',
+    'U+0110-0111',
+    'U+0128-0129',
+    'U+0168-0169',
+    'U+01A0-01A1',
+    'U+01AF-01B0',
+    'U+1EA0-1EF9',
+    'U+20AB',
+  ),
+  'latin-ext': (
+    'U+0100-024F',
+    'U+0259',
+    'U+1E00-1EFF',
+    'U+2020',
+    'U+20A0-20AB',
+    'U+20AD-20CF',
+    'U+2113',
+    'U+2C60-2C7F',
+    'U+A720-A7FF',
+  ),
+  'latin': (
+    'U+0000-00FF',
+    'U+0131',
+    'U+0152-0153',
+    'U+02BB-02BC',
+    'U+02C6',
+    'U+02DA',
+    'U+02DC',
+    'U+2000-206F',
+    'U+2074',
+    'U+20AC',
+    'U+2122',
+    'U+2191',
+    'U+2193',
+    'U+2212',
+    'U+2215',
+    'U+FEFF',
+    'U+FFFD',
+  ),
+);
+
+// -------------
+// Font variants
+// -------------
+
+/// @author Juan Ortiz <juan.ortiz@kavak.com>
+/// @group basic-fonts
+/// @type map
+$title-variants: (
+  (
+    'family': 'title',
+    'weight': 'semibold',
+    'size': 2rem,
+    'line-height': 1.2,
+    'letter-spacing': 0,
+  ),
+  (
+    'family': 'title',
+    'weight': 'semibold',
+    'size': 1.5rem,
+    'line-height': 1.2,
+    'letter-spacing': 0,
+  ),
+  (
+    'family': 'title',
+    'weight': 'semibold',
+    'size': 1.25rem,
+    'line-height': 1.2,
+    'letter-spacing': 0,
+  )
+);
+
+/// @author Juan Ortiz <juan.ortiz@kavak.com>
+/// @group basic-fonts
+/// @type map
+$subtitle-variants: (
+  (
+    'family': 'title',
+    'weight': 'semibold',
+    'size': 1rem,
+    'line-height': 1.2,
+    'letter-spacing': 0.003rem,
+  )
+);
+
+/// @author Juan Ortiz <juan.ortiz@kavak.com>
+/// @group basic-fonts
+/// @type map
+$text-variants: (
+  (
+    'family': 'default',
+    'weight': 'normal',
+    'size': 1rem,
+    'line-height': 1.4,
+    'letter-spacing': 0,
+  )
+);
+
+/// @author Juan Ortiz <juan.ortiz@kavak.com>
+/// @group basic-fonts
+/// @type map
+$caption-variants: (
+  (
+    'family': 'default',
+    'weight': 'normal',
+    'size': 0.75rem,
+    'line-height': 1.4,
+    'letter-spacing': 0.00225rem,
+  )
+);
+
+/// @author Juan Ortiz <juan.ortiz@kavak.com>
+/// @group basic-fonts
+/// @type map
+$font-styles: (
+  'title': $title-variants,
+  'subtitle': $subtitle-variants,
+  'text': $text-variants,
+  'caption': $caption-variants,
+);

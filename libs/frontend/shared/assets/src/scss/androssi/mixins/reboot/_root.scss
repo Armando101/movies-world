@@ -1,0 +1,10 @@
+// ----
+// Root
+// ----
+
+@mixin reboot-root {
+  :root {
+    @include define-palette-variables;
+    @include define-font-family-variables;
+  }
+}

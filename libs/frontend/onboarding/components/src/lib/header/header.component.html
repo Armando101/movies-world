@@ -1,0 +1,8 @@
+<header>
+    <div class="menu">
+        <h2>🎥 Movies World</h2>
+        <img id="menu" (click)="displayMenu = !displayMenu"
+            src="https://image.flaticon.com/icons/png/512/545/545705.png" alt="menu icon" aria-label="menu icon">
+    </div>
+    <a *ngIf="displayMenu" [routerLink]='["/#"]' routerLinkActive="router-link-active">Search movie</a>
+</header>

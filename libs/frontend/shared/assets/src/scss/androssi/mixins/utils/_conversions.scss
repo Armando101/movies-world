@@ -1,0 +1,18 @@
+// -------
+// Conversions
+// -------
+
+/// Converts px value to rem value
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group conversions
+/// @param {number} $value - px value
+/// @return {string} - rem value
+/// @example scss - Passing px value
+///   to-rem(230);
+///   // 14.375
+///
+
+@function to-rem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}

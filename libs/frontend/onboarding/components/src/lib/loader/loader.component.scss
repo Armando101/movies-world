@@ -1,0 +1,17 @@
+.loader {
+  animation: spin 2s linear infinite;
+  border: 8px solid var(--medium-tint);
+  border-radius: 100%;
+  border-top: 8px solid var(--text-light);
+  height: 7.5rem;
+  width: 7.5rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

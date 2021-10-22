@@ -1,0 +1,51 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+:host {
+  position: relative;
+}
+
+img,
+.card {
+  height: 24rem;
+  width: to-rem(230);
+  @include add-border-radius(3);
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  @include add-bg-color('text-light');
+}
+
+img {
+  aspect-ratio: attr(width) / attr(height);
+  background-color: gray;
+  display: inline-block;
+  text-align: justify;
+  @include add-shadow(4, 4);
+}
+
+.card {
+  transition: 450ms all;
+  &_overlay {
+    display: none;
+    overflow-x: hidden;
+    @include add-bg-color-rgba('black', 0.65);
+    @include add-border-radius(3);
+    @include add-color('white');
+    @include add-padding(2);
+    @include set-positions(absolute);
+  }
+  &:hover &_overlay {
+    display: block;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}

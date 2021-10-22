@@ -4,8 +4,7 @@ import { RuntimePipe } from './runtime.pipe';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [
-    RuntimePipe
-  ],
+  declarations: [RuntimePipe],
+  exports: [RuntimePipe],
 })
-export class FrontendOnboardingUtilitiesPipesModule {}
+export class RuntimeModule {}

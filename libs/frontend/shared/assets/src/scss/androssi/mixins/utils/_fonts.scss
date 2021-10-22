@@ -1,0 +1,31 @@
+@mixin define-font-family-variables(
+  $font-families: $font-families,
+  $fallbacks: $font-fallbacks
+) {
+  @each $key, $value in $font-families {
+    #{to-css-var('#{$prefix-font}-#{$key}')}: $value;
+  }
+
+  @each $key, $value in $fallbacks {
+    #{to-css-var('#{$prefix-font-fallback}-#{$key}')}: $value;
+  }
+}
+
+@function get-font-var($key, $is-fallback: false) {
+  $prefix: if($is-fallback, $prefix-font-fallback, $prefix-font);
+
+  @return get-css-var('#{$prefix}-#{$key}');
+}
+
+@mixin add-font-weight($key, $font-weights: $font-weights) {
+  font-weight: map-get($font-weights, $key);
+}
+
+@mixin add-font-family($key, $fallback-key: 'sans-serif') {
+  font-family: get-font-var($key), get-font-var($fallback-key, true);
+}
+
+@mixin add-font-size($size, $type: 'rem') {
+  $value: if($type == 'rem', $size + rem, to-rem($size));
+  font-size: $value;
+}

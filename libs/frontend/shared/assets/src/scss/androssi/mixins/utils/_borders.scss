@@ -1,0 +1,30 @@
+// -------
+// Borders
+// -------
+
+/// Get border radius value
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-borders
+/// @param {number} $radius-key - Border radius key
+/// @example scss - Get a border-radius value of $border-radius-list
+///   @include get-border-radius(1);
+///   // 0.25rem
+///
+@function get-border-radius($radius-key) {
+  $border-radius: map-get($border-radius-list, $radius-key);
+  @return $border-radius;
+}
+
+/// Add border radius property
+/// @author Armando Rivera <manuel.rivera@kavak.com>
+/// @group basic-borders
+/// @param {number} $radius-key - Border radius key
+/// @require {function} get-border-radius
+/// @example scss - Add the border-radius property in all directions with size 2
+///   @include add-border-radius(2);
+///   // Add property: border-radius: 0.375rem;
+///
+@mixin add-border-radius($radius-key) {
+  $border-radius: get-border-radius($radius-key);
+  border-radius: $border-radius;
+}

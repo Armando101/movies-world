@@ -1,0 +1,7 @@
+<div [ngClass]="{'disabled': !hover}" class="card" aria-label="movie card">
+    <img [src]=imageUrl [alt]="title" loading="lazy" [title]="title" height="384" width="230"
+        aria-label="image movie card">
+    <div class="card_overlay" aria-label="description movie">
+        <p>{{overview}}</p>
+    </div>
+</div>

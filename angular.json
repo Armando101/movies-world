@@ -26,6 +26,31 @@
         }
       }
     },
+    "frontend-onboarding-components": {
+      "projectType": "library",
+      "root": "libs/frontend/onboarding/components",
+      "sourceRoot": "libs/frontend/onboarding/components/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/onboarding/components"],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/components/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/onboarding/components/src/**/*.ts",
+              "libs/frontend/onboarding/components/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-onboarding-data-access": {
       "root": "libs/frontend/onboarding/data-access",
       "sourceRoot": "libs/frontend/onboarding/data-access/src",
