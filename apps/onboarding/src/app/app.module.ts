@@ -10,6 +10,7 @@ import {
   MovieSummaryModule,
   PersonCardModule,
   MovieCreditsModule,
+  LoaderModule,
 } from '@olimpo/frontend/onboarding/components';
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import {
     MovieSummaryModule,
     PersonCardModule,
     MovieCreditsModule,
+    LoaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
