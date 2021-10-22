@@ -1,0 +1,36 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.grid-cards {
+  @include add-padding(3);
+  & h3 {
+    @include add-font-family('title');
+    @include add-font-size(2);
+    @include add-margin(0, 'margin-block-start');
+  }
+}
+
+.cards {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-cards h2 {
+    @include add-font-size(5);
+  }
+}

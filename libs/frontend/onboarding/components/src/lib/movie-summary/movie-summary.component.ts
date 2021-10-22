@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IGenre } from '@olimpo/frontend/onboarding/data-access';
 
 @Component({
   selector: 'frontend-movie-summary',
@@ -11,7 +12,7 @@ export class MovieSummaryComponent {
   @Input() overview = '';
   @Input() progressBarTitle = '';
   @Input() releaseDate = '';
-  @Input() genres: Array<{ id: number; name: string }> = [];
+  @Input() genres: Array<IGenre> = [];
   @Input() runtime = 0;
   @Input() voteAverage = 0;
 }

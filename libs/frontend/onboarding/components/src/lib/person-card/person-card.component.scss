@@ -2,7 +2,6 @@
 
 .card {
   display: flex;
-  max-inline-size: 15rem;
   @include add-padding(2);
   @include add-shadow(2, 2);
   & img {
