@@ -6,15 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./movie-card.component.scss'],
 })
 export class MovieCardComponent {
-
-  @Input() id = '';
+  @Input() id = 0;
   @Input() title = '';
   @Input() imageUrl = '';
   @Input() overview = '';
-  @Input() hover = false;
+  @Input() hover = true;
 
   constructor() {
     console.log('it works');
   }
-
 }

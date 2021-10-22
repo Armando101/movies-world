@@ -1,1 +1,11 @@
-<p>movie-summary works!</p>
+<section class="summary">
+    <frontend-movie-card [title]="title" [imageUrl]="imageUrl" [overview]="overview" [hover]="false">
+    </frontend-movie-card>
+    <div class="summary_overview">
+        <h3 class="summary_title">{{ title }} ({{ releaseDate.split('-')[0] }})</h3>
+        <p>{{ releaseDate }} <span *ngFor="let genre of genres"> {{ genre.name }} </span> <span>{{ runtime | runtime
+                }}</span> </p>
+        <frontend-circle-progress-bar [title]="progressBarTitle" [value]="voteAverage"></frontend-circle-progress-bar>
+        <p class="summary_info">{{ overview }}</p>
+    </div>
+</section>

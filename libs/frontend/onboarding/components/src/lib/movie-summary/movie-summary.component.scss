@@ -1,0 +1,51 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.summary,
+.summary_overview {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary {
+  @include add-padding(3);
+  &_title {
+    @include add-font-family('title');
+    @include add-font-size(2);
+  }
+  &_info {
+    @include add-font-size(1.125);
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+p span::before {
+  content: '.';
+  line-height: 0;
+  @include add-font-size(3);
+}
+
+@media screen and (min-width: 768px) {
+  .summary {
+    flex-direction: row;
+    &_overview {
+      align-items: start;
+      @include add-padding(3);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .summary {
+    &_title {
+      @include add-font-size(2.5);
+    }
+    &_info {
+      @include add-font-size(1.5);
+    }
+  }
+}

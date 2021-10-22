@@ -41,6 +41,10 @@ img {
   }
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 p {
   margin: 0;
   text-align: justify;
