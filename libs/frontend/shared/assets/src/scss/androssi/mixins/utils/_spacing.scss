@@ -7,6 +7,14 @@
   #{$prop-name}: get-space($spaces);
 }
 
-@mixin add-padding($spaces) {
-  @include _add-space-up('padding', $spaces, 'xs');
+@mixin add-padding($spaces, $prop-name: 'padding') {
+  @include _add-space-up($prop-name, $spaces, 'xs');
+}
+
+@mixin add-margin($spaces, $prop-name: 'margin') {
+  @include _add-space-up($prop-name, $spaces);
+}
+
+@mixin add-size($spaces, $prop-name: 'width') {
+  @include _add-space-up($prop-name, $spaces);
 }

@@ -8,6 +8,7 @@ import {
   HeroModule,
   CircleProgressBarModule,
   MovieSummaryModule,
+  PersonCardModule,
 } from '@olimpo/frontend/onboarding/components';
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import {
     HeroModule,
     CircleProgressBarModule,
     MovieSummaryModule,
+    PersonCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

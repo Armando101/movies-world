@@ -1,1 +1,7 @@
-<p>person-card works!</p>
+<div class="card" aria-label="person card">
+    <img [src]="imageUrl" [alt]="title" [title]="title" aria-label="image person">
+    <div class="card_info" aria-label="person description">
+        <h3>{{ title }}</h3>
+        <p>{{ subtitle }}</p>
+    </div>
+</div>
