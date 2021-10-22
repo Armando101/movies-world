@@ -12,6 +12,7 @@ import {
   MovieCreditsModule,
   LoaderModule,
   HeaderModule,
+  FooterModule,
 } from '@olimpo/frontend/onboarding/components';
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,7 @@ import {
     MovieCreditsModule,
     LoaderModule,
     HeaderModule,
+    FooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
