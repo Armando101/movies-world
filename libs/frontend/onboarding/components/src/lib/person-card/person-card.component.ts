@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ICast, ICrew } from '@olimpo/frontend/onboarding/data-access';
 
 @Component({
   selector: 'frontend-person-card',
@@ -6,7 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./person-card.component.scss'],
 })
 export class PersonCardComponent {
-  @Input() imageUrl!: string;
-  @Input() title!: string;
-  @Input() subtitle!: string;
+  @Input() credit!: ICast & ICrew;
 }

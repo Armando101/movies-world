@@ -1,24 +1,19 @@
-<div class="wrapper">
-    <frontend-header></frontend-header>
+<main class="main">
+    <h2>Popular Movies</h2>
+    <div class="main_content" aria-label="movie cards">
 
-    <main class="main">
-        <h2>Popular Movies</h2>
-        <div class="main_content" aria-label="movie cards">
+        <frontend-movie-card *ngFor="let card of popularMovies" [id]="card.id" [title]="card.title"
+            [imageUrl]="card.imageUrl" [overview]="card.overview"></frontend-movie-card>
+        <frontend-no-results *ngIf="popularMovies.length === 0"></frontend-no-results>
+        <frontend-loader *ngIf="popularMoviesLoader"></frontend-loader>
+    </div>
 
-            <frontend-movie-card *ngFor="let card of popularMovies" [id]="card.id" [title]="card.title"
-                [imageUrl]="card.imageUrl" [overview]="card.overview"></frontend-movie-card>
-            <frontend-no-results *ngIf="popularMovies.length === 0"></frontend-no-results>
-            <frontend-loader *ngIf="popularMoviesLoader"></frontend-loader>
-        </div>
-
-        <h2>Top Rated Movies</h2>
-        <div class="main_content">
-            <frontend-movie-card *ngFor="let card of topMovies" [id]="card.id" [title]="card.title"
-                [imageUrl]="card.imageUrl" [overview]="card.overview">
-            </frontend-movie-card>
-            <frontend-no-results *ngIf="topMovies.length === 0"></frontend-no-results>
-            <frontend-loader *ngIf="topMoviesLoader"></frontend-loader>
-        </div>
-    </main>
-    <frontend-footer></frontend-footer>
-</div>
+    <h2>Top Rated Movies</h2>
+    <div class="main_content">
+        <frontend-movie-card *ngFor="let card of topMovies" [id]="card.id" [title]="card.title"
+            [imageUrl]="card.imageUrl" [overview]="card.overview">
+        </frontend-movie-card>
+        <frontend-no-results *ngIf="topMovies.length === 0"></frontend-no-results>
+        <frontend-loader *ngIf="topMoviesLoader"></frontend-loader>
+    </div>
+</main>

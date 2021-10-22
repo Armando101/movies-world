@@ -1,8 +1,4 @@
 @import 'libs/frontend/shared/assets/src/scss/androssi/base';
-.wrapper {
-  min-height: 100vh;
-  position: relative;
-}
 
 .main {
   @include add-padding(3);

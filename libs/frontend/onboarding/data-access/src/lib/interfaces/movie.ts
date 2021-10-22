@@ -15,6 +15,7 @@ export interface IMovie {
   tagline?: string;
   title?: string;
   voteAverage?: number;
+  progressBarTitle?: string;
 }
 
 export interface IGenre {

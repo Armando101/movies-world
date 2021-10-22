@@ -1,8 +1,7 @@
+<h3>{{ title }}</h3>
 <div *ngIf="credits.length > 0" class="grid-cards">
-    <h3>{{ title }}</h3>
     <section class="cards" aria-label="cards credit panel">
-        <frontend-person-card *ngFor="let credit of credits" [imageUrl]="credit.profileUrl!" [title]="credit.name!"
-            [subtitle]="credit.character!">
+        <frontend-person-card *ngFor="let credit of credits" [credit]="credit">
         </frontend-person-card>
     </section>
 </div>
