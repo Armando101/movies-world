@@ -3,34 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import {
-  MovieCardModule,
-  HeroModule,
-  CircleProgressBarModule,
-  MovieSummaryModule,
-  PersonCardModule,
-  MovieCreditsModule,
-  LoaderModule,
-  HeaderModule,
-  FooterModule,
-  NoResultsModule,
-} from '@olimpo/frontend/onboarding/components';
+import { HomeModule } from '@olimpo/frontend/onboarding/features/home';
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    MovieCardModule,
-    HeroModule,
-    CircleProgressBarModule,
-    MovieSummaryModule,
-    PersonCardModule,
-    MovieCreditsModule,
-    LoaderModule,
-    HeaderModule,
-    FooterModule,
-    NoResultsModule,
-  ],
+  imports: [BrowserModule, RouterModule, HomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

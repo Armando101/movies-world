@@ -1,0 +1,48 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main {
+  @include add-padding(3);
+  &_content {
+    display: grid;
+    justify-content: center;
+  }
+  & h2 {
+    text-align: center;
+    @include add-font-family('title');
+    @include add-font-size(2);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main h2 {
+    @include add-font-size(3);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main_content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main_content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main_content {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .main_content {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
