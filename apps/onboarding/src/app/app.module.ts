@@ -13,6 +13,7 @@ import {
   LoaderModule,
   HeaderModule,
   FooterModule,
+  NoResultsModule,
 } from '@olimpo/frontend/onboarding/components';
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import {
     LoaderModule,
     HeaderModule,
     FooterModule,
+    NoResultsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
