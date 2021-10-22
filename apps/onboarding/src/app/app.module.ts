@@ -11,6 +11,7 @@ import {
   PersonCardModule,
   MovieCreditsModule,
   LoaderModule,
+  HeaderModule,
 } from '@olimpo/frontend/onboarding/components';
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import {
     PersonCardModule,
     MovieCreditsModule,
     LoaderModule,
+    HeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
