@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from '@olimpo/frontend/onboarding/utilities/api';
+import { IMovie } from '../interfaces';
 import {
   getMovieCastMock,
   getMovieCrewMock,
   getMovieDetailsMock,
   getPopularMoviesMock,
-  getTopRatedMoviesMock,
 } from './mocks/movies.mock';
 
 @Injectable({
@@ -15,11 +15,15 @@ export class MovieService {
   constructor(private apiService: ApiService) {}
 
   getPopularMovies() {
-    return getPopularMoviesMock();
+    return this.apiService.get<Array<IMovie>>('movie/popular', {
+      params: { page: '1' },
+    });
   }
 
   getTopRatedMovies() {
-    return getTopRatedMoviesMock();
+    return this.apiService.get<Array<IMovie>>('movie/top_rated', {
+      params: { page: '1' },
+    });
   }
 
   getMovieDetails() {

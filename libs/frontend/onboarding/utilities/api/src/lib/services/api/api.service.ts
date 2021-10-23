@@ -1,15 +1,22 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { defaultOptions } from '../../constants/api.const';
 import { IApiEndpoint } from '../../interfaces/api.interface';
+import { IEnvironment } from '@olimpo/frontend/environments';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
-
+  baseUrl: string;
+  constructor(
+    @Inject('environment') readonly environment: IEnvironment,
+    private http: HttpClient
+  ) {
+    this.baseUrl = this.environment.baseUrl;
+  }
   /**
    * HTTP get request
    *
@@ -28,6 +35,16 @@ export class ApiService {
       pathUrl = endpoint.url;
     }
 
-    return this.http.get<T>(pathUrl, { ...options });
+    if (options.params) {
+      options.params.api_key = this.environment.apiKey;
+    }
+
+    return this.addPipe(
+      this.http.get<T>(`${this.baseUrl}/${pathUrl}`, { ...options })
+    );
+  }
+
+  addPipe(request: Observable<any>) {
+    return request.pipe(map((response) => response.results));
   }
 }

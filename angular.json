@@ -26,6 +26,31 @@
         }
       }
     },
+    "frontend-environment": {
+      "projectType": "library",
+      "root": "libs/frontend/environment",
+      "sourceRoot": "libs/frontend/environment/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/environment"],
+          "options": {
+            "jestConfig": "libs/frontend/environment/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/environment/src/**/*.ts",
+              "libs/frontend/environment/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-onboarding-components": {
       "projectType": "library",
       "root": "libs/frontend/onboarding/components",

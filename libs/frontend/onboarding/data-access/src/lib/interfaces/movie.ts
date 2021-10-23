@@ -5,7 +5,7 @@ export interface IMovie {
   homepage?: string;
   id?: number;
   imagePath?: string;
-  imageUrl?: string;
+  poster_path?: string;
   originalLanguage?: string;
   originalTitle?: string;
   overview?: string;
@@ -21,4 +21,11 @@ export interface IMovie {
 export interface IGenre {
   id?: number;
   name?: string;
+}
+
+export interface IResponseMovies {
+  page: number;
+  total_pages: number;
+  total_results: number;
+  results: Array<IMovie>;
 }

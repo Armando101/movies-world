@@ -9,6 +9,7 @@ import {
   FooterModule,
   HeaderModule,
 } from '@olimpo/frontend/onboarding/components';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,12 @@ import {
     HeaderModule,
     FooterModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'environment',
+      useValue: environment,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

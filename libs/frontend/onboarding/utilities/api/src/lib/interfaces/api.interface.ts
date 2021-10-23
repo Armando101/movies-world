@@ -1,8 +1,8 @@
 import { HttpHeaders, HttpParams } from '@angular/common/http';
 
 export interface IApiOptions {
-  headers?: HttpHeaders | { [header: string]: string | string[] };
-  params?: HttpParams | { [param: string]: string | string[] };
+  headers?: { [header: string]: string | string[] };
+  params?: { [param: string]: string | string[] };
 }
 
 export interface IApiEndpoint {

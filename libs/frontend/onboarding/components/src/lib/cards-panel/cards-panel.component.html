@@ -1,5 +1,5 @@
 <section class="cards" *ngIf="movies.length > 0">
-    <frontend-movie-card *ngFor="let card of movies" [id]="card.id" [title]="card.title" [imageUrl]="card.imageUrl"
+    <frontend-movie-card *ngFor="let card of movies" [id]="card.id" [title]="card.title" [imageUrl]="card.poster_path"
         [overview]="card.overview">
     </frontend-movie-card>
 </section>

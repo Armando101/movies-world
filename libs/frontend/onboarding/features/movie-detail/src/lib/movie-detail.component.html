@@ -1,8 +1,8 @@
-<frontend-hero [title]="details.title || ''" [backdropUrl]="details.imageUrl || ''"
+<frontend-hero [title]="details.title || ''" [backdropUrl]="details.poster_path || ''"
     [tagline]="'Hello ' + details.title">
 </frontend-hero>
 
-<frontend-movie-summary [title]="details.title || ''" [imageUrl]="details.imageUrl || ''"
+<frontend-movie-summary [title]="details.title || ''" [imageUrl]="details.poster_path || ''"
     [overview]="details.overview || ''" [progressBarTitle]="details.progressBarTitle || ''"
     [releaseDate]="details.releaseDate || ''" [genres]="details.genres || []" [runtime]=" details.runtime || 0"
     [voteAverage]="details.voteAverage || 0"></frontend-movie-summary>
@@ -12,6 +12,6 @@
 
 <h2>Similar Movies</h2>
 <div class="movie-cards" aria-label="movies grid">
-    <frontend-movie-card *ngFor="let card of movies" [id]="card.id" [title]="card.title" [imageUrl]="card.imageUrl"
+    <frontend-movie-card *ngFor="let card of movies" [id]="card.id" [title]="card.title" [imageUrl]="card.poster_path"
         [overview]="card.overview"></frontend-movie-card>
 </div>

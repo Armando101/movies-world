@@ -35,6 +35,9 @@
       ],
       "@olimpo/frontend/onboarding/utilities/pipes": [
         "libs/frontend/onboarding/utilities/pipes/src/index.ts"
+      ],
+      "@olimpo/frontend/environments": [
+        "libs/frontend/environment/src/index.ts"
       ]
     }
   },
