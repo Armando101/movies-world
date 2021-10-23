@@ -26,8 +26,12 @@ export class MovieService {
     });
   }
 
-  getMovieDetails() {
-    return getMovieDetailsMock();
+  getMovieDetails(id: string) {
+    return this.apiService.get<IMovie>(
+      `movie/${id}`,
+      { params: {} },
+      { pipes: false }
+    );
   }
 
   getMovieCast() {

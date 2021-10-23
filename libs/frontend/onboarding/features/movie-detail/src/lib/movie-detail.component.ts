@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {
   ICast,
   ICrew,
@@ -18,8 +19,16 @@ export class MovieDetailComponent implements OnInit {
   cast!: Array<ICast>;
   crew!: Array<ICrew>;
   movies: Array<IMovie> = [];
+  id!: string;
 
-  constructor(private movieService: MovieService) {}
+  constructor(
+    private movieService: MovieService,
+    private route: ActivatedRoute
+  ) {
+    this.route.params.subscribe((params) => {
+      this.id = params.id;
+    });
+  }
 
   ngOnInit() {
     this.loadDetails();
@@ -28,7 +37,7 @@ export class MovieDetailComponent implements OnInit {
   }
 
   loadDetails() {
-    this.movieService.getMovieDetails().subscribe((data) => {
+    this.movieService.getMovieDetails(this.id).subscribe((data) => {
       this.details = data;
     });
   }
