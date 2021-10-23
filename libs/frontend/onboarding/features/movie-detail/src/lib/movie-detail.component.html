@@ -1,14 +1,17 @@
-<frontend-hero *ngIf="details" [title]="details.title || ''" [backdropUrl]="details.backdrop_path || ''"
-    [tagline]="'Hello ' + details.title">
-</frontend-hero>
+<section class="detail">
 
-<frontend-movie-summary *ngIf="details" [title]="details.title || ''" [imageUrl]="details.poster_path || ''"
-    [overview]="details.overview || ''" [progressBarTitle]="details.progressBarTitle || 'User Score'"
-    [releaseDate]="details.release_date || ''" [genres]="details.genres || []" [runtime]=" details.runtime || 0"
-    [voteAverage]="details.vote_average || 0"></frontend-movie-summary>
+    <frontend-hero *ngIf="details" [title]="details.title || ''" [backdropUrl]="details.backdrop_path || ''"
+        [tagline]="'Hello ' + details.title">
+    </frontend-hero>
 
-<frontend-movie-credits [title]="'Movie Cast'" [credits]="cast"></frontend-movie-credits>
-<frontend-movie-credits [title]="'Movie Crew'" [credits]="crew"></frontend-movie-credits>
+    <frontend-movie-summary *ngIf="details" [title]="details.title || ''" [imageUrl]="details.poster_path || ''"
+        [overview]="details.overview || ''" [progressBarTitle]="details.progressBarTitle || 'User Score'"
+        [releaseDate]="details.release_date || ''" [genres]="details.genres || []" [runtime]=" details.runtime || 0"
+        [voteAverage]="details.vote_average || 0"></frontend-movie-summary>
 
-<h2>Similar Movies</h2>
-<frontend-cards-panel [movies]="movies"></frontend-cards-panel>
+    <frontend-movie-credits [title]="'Movie Cast'" [credits]="cast"></frontend-movie-credits>
+    <frontend-movie-credits [title]="'Movie Crew'" [credits]="crew"></frontend-movie-credits>
+
+    <h2>Similar Movies</h2>
+    <frontend-cards-panel [movies]="movies"></frontend-cards-panel>
+</section>

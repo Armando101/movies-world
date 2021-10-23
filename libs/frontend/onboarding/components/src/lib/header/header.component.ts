@@ -6,10 +6,10 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  displayMenu = false;
+  displayMenu = true;
   @HostListener('document:click', ['$event'])
   clicked(event: { target: { id: string } }) {
-    if (event.target.id === 'menu') {
+    if (event.target.id === 'menu' || window.innerWidth >= 1024) {
       return;
     }
     this.displayMenu = false;

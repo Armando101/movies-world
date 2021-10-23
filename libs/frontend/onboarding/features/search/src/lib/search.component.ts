@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { IMovie, MovieService } from '@olimpo/frontend/onboarding/data-access';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'frontend-search',
@@ -26,13 +27,16 @@ export class SearchComponent implements OnInit {
   }
 
   viewInputChanges() {
-    this.searchForm.get('query')?.valueChanges.subscribe((value: string) => {
-      if (value === '') {
-        this.movies = [];
-      } else {
-        this.loadDataMovies(value);
-      }
-    });
+    this.searchForm
+      .get('query')
+      ?.valueChanges.pipe(debounceTime(300))
+      .subscribe((value: string) => {
+        if (value === '') {
+          this.movies = [];
+        } else {
+          this.loadDataMovies(value);
+        }
+      });
   }
 
   loadDataMovies(value: string) {

@@ -40,14 +40,18 @@ export class MovieService {
   }
 
   getSimilarMovies(movieId: string) {
-    return this.apiService.get<any>(
+    return this.apiService.get<Array<IMovie>>(
       `movie/${movieId}/similar`,
       { params: {} },
       { pipe: 'results' }
     );
   }
 
-  getMoviesBySearch(value: string) {
-    return getPopularMoviesMock();
+  getMoviesBySearch(query: string) {
+    return this.apiService.get<Array<IMovie>>(
+      'search/movie',
+      { params: { query } },
+      { pipe: 'results' }
+    );
   }
 }
