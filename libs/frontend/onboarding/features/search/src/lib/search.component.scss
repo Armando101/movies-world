@@ -1,0 +1,31 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.search {
+  @include add-padding(4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & input {
+    border-color: var(--text-light);
+    box-sizing: border-box;
+    transition: width 0.4s ease-in-out;
+    width: 14rem;
+    @include add-border-radius(3);
+    @include add-padding(2);
+    &:focus {
+      width: 100%;
+    }
+  }
+}
+h2 {
+  text-align: center;
+  @include add-font-size(2.5);
+  @include add-font-family('title');
+}
+
+h3 span {
+  @include add-color('primary');
+}

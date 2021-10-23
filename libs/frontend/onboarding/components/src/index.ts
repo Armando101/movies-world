@@ -8,3 +8,4 @@ export * from './lib/loader/loader.module';
 export * from './lib/header/header.module';
 export * from './lib/footer/footer.module';
 export * from './lib/no-results/no-results.module';
+export * from './lib/cards-panel/cards-panel.module';

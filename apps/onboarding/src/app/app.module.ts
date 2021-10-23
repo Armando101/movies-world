@@ -9,7 +9,6 @@ import {
   FooterModule,
   HeaderModule,
 } from '@olimpo/frontend/onboarding/components';
-import { HomeModule } from '@olimpo/frontend/onboarding/features/home';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +19,6 @@ import { HomeModule } from '@olimpo/frontend/onboarding/features/home';
     AppRoutingModule,
     HeaderModule,
     FooterModule,
-    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

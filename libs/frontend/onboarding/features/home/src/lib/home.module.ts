@@ -6,10 +6,9 @@ import { HomeComponent } from './home.component';
 
 import {
   MovieCardModule,
-  HeaderModule,
-  FooterModule,
   NoResultsModule,
   LoaderModule,
+  CardsPanelModule,
 } from '@olimpo/frontend/onboarding/components';
 
 @NgModule({
@@ -18,10 +17,9 @@ import {
     CommonModule,
     HomeRoutingModule,
     MovieCardModule,
-    HeaderModule,
-    FooterModule,
     NoResultsModule,
     LoaderModule,
+    CardsPanelModule,
   ],
   exports: [HomeComponent],
 })

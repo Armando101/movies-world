@@ -1,4 +1,5 @@
-<div [ngClass]="{'disabled': !hover}" class="card" aria-label="movie card">
+<div [routerLink]="['movie', id]" routerLinkActive="router-link-active" [ngClass]="{'disabled': !hover}" class="card"
+    aria-label="movie card">
     <img [src]=imageUrl [alt]="title" loading="lazy" [title]="title" height="384" width="230"
         aria-label="image movie card">
     <div class="card_overlay" aria-label="description movie">

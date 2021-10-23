@@ -1,1 +1,12 @@
-<p>search works!</p>
+<section class="search">
+    <h2>Movie Search</h2>
+    <form [formGroup]="searchForm">
+        <input placeholder="Type something" type="text" formControlName="query">
+    </form>
+
+    <h3>Results for <span>{{ searchForm.get('query')?.value }}</span></h3>
+
+    <frontend-cards-panel *ngIf="searchForm.get('query')?.touched || searchForm.get('query')?.dirty " [movies]="movies"
+        [moviesLoader]="loaderMovies">
+    </frontend-cards-panel>
+</section>

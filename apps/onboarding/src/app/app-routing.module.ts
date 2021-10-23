@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     pathMatch: 'full',
     loadChildren: () =>
       import('@olimpo/frontend/onboarding/features/home').then(

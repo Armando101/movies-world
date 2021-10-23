@@ -38,7 +38,7 @@ export class MovieService {
     return getPopularMoviesMock();
   }
 
-  getMoviesBySearch() {
+  getMoviesBySearch(value: string) {
     return getPopularMoviesMock();
   }
 }
