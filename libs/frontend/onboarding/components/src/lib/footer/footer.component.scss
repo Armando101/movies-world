@@ -2,14 +2,13 @@
 
 footer {
   align-items: center;
-  bottom: 0;
+  bottom: -8rem;
   display: flex;
   height: 6rem;
   justify-content: center;
   position: absolute;
+  width: 100%;
   @include add-bg-color('medium-tint');
-  @include add-padding(2);
-  @include add-padding(1, 'padding-block-start');
   & p {
     text-align: center;
     @include add-font-size(1.25);

@@ -1,0 +1,17 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.main {
+  @include add-padding(3);
+
+  & h2 {
+    text-align: center;
+    @include add-font-family('title');
+    @include add-font-size(2);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main h2 {
+    @include add-font-size(3);
+  }
+}

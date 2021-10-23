@@ -1,0 +1,5 @@
+@import 'libs/frontend/shared/assets/src/scss/androssi/base';
+
+.detail {
+  @include add-padding(3);
+}

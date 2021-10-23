@@ -26,6 +26,31 @@
         }
       }
     },
+    "frontend-environment": {
+      "projectType": "library",
+      "root": "libs/frontend/environment",
+      "sourceRoot": "libs/frontend/environment/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/environment"],
+          "options": {
+            "jestConfig": "libs/frontend/environment/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/environment/src/**/*.ts",
+              "libs/frontend/environment/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-onboarding-components": {
       "projectType": "library",
       "root": "libs/frontend/onboarding/components",
@@ -145,6 +170,31 @@
             "lintFilePatterns": [
               "libs/frontend/onboarding/features/search/src/**/*.ts",
               "libs/frontend/onboarding/features/search/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "frontend-onboarding-utilities-api": {
+      "projectType": "library",
+      "root": "libs/frontend/onboarding/utilities/api",
+      "sourceRoot": "libs/frontend/onboarding/utilities/api/src",
+      "prefix": "frontend",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/onboarding/utilities/api"],
+          "options": {
+            "jestConfig": "libs/frontend/onboarding/utilities/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/onboarding/utilities/api/src/**/*.ts",
+              "libs/frontend/onboarding/utilities/api/src/**/*.html"
             ]
           }
         }

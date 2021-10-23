@@ -1,0 +1,7 @@
+<section class="cards" *ngIf="movies.length > 0">
+    <frontend-movie-card *ngFor="let card of movies" [id]="card.id" [title]="card.title" [imageUrl]="card.poster_path"
+        [overview]="card.overview">
+    </frontend-movie-card>
+</section>
+<frontend-no-results *ngIf="movies.length === 0 && !moviesLoader"></frontend-no-results>
+<frontend-loader *ngIf="moviesLoader"></frontend-loader>

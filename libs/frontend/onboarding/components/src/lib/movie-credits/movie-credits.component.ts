@@ -8,5 +8,5 @@ import { ICast, ICrew } from '@olimpo/frontend/onboarding/data-access';
 })
 export class MovieCreditsComponent {
   @Input() title!: string;
-  @Input() credits: ICast[] | ICrew[] = [];
+  @Input() credits: Array<ICrew> | Array<ICast> = [];
 }

@@ -30,6 +30,9 @@
     "feature-onboarding-features-search": {
       "tags": []
     },
+    "frontend-environment": {
+      "tags": []
+    },
     "frontend-onboarding-components": {
       "tags": []
     },
@@ -43,6 +46,9 @@
       "tags": []
     },
     "frontend-onboarding-features-search": {
+      "tags": []
+    },
+    "frontend-onboarding-utilities-api": {
       "tags": []
     },
     "frontend-onboarding-utilities-pipes": {

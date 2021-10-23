@@ -2,11 +2,12 @@
 
 .grid-cards {
   @include add-padding(3);
-  & h3 {
-    @include add-font-family('title');
-    @include add-font-size(2);
-    @include add-margin(0, 'margin-block-start');
-  }
+}
+
+h3 {
+  @include add-font-family('title');
+  @include add-font-size(2);
+  @include add-margin(2, 'margin-inline-start');
 }
 
 .cards {

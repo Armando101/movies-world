@@ -1,7 +1,7 @@
 <div class="card" aria-label="person card">
-    <img [src]="imageUrl" [alt]="title" [title]="title" aria-label="image person">
+    <img [src]="image" [alt]="credit.name" [title]="credit.name" aria-label="image person">
     <div class="card_info" aria-label="person description">
-        <h3>{{ title }}</h3>
-        <p>{{ subtitle }}</p>
+        <h3>{{ credit.name }}</h3>
+        <p>{{ credit.job || credit.character }}</p>
     </div>
 </div>

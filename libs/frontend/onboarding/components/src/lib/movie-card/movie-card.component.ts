@@ -1,18 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
+import { imageCard, imagePath } from '../constants/imageSizes';
 
 @Component({
   selector: 'frontend-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
 })
-export class MovieCardComponent {
-  @Input() id = 0;
-  @Input() title = '';
-  @Input() imageUrl = '';
-  @Input() overview = '';
+export class MovieCardComponent implements OnChanges {
+  @Input() id?: number;
+  @Input() title?: string;
+  @Input() imageUrl?: string;
+  @Input() overview?: string;
   @Input() hover = true;
+  image!: string;
 
-  constructor() {
-    console.log('it works');
+  ngOnChanges() {
+    this.image = `${imagePath}/${imageCard}/${this.imageUrl}`;
   }
 }

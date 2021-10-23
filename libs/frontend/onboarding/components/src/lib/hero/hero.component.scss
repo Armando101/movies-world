@@ -18,6 +18,7 @@ img {
     @include add-color('white');
     @include set-positions(absolute);
     & h2 {
+      text-align: center;
       @include add-font-family('title');
       @include add-font-weight('bold');
       @include add-font-size(3);

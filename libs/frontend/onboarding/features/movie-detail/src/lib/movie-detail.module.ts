@@ -4,17 +4,24 @@ import { CommonModule } from '@angular/common';
 import { MovieDetailRoutingModule } from './movie-detail-routing.module';
 import { MovieDetailComponent } from './movie-detail.component';
 
-
+import {
+  HeroModule,
+  MovieCardModule,
+  MovieCreditsModule,
+  MovieSummaryModule,
+  CardsPanelModule,
+} from '@olimpo/frontend/onboarding/components';
 @NgModule({
-  declarations: [
-    MovieDetailComponent
-  ],
+  declarations: [MovieDetailComponent],
   imports: [
     CommonModule,
-    MovieDetailRoutingModule
+    MovieDetailRoutingModule,
+    HeroModule,
+    MovieSummaryModule,
+    MovieCreditsModule,
+    MovieCardModule,
+    CardsPanelModule,
   ],
-  exports: [
-    MovieDetailComponent
-  ]
+  exports: [MovieDetailComponent],
 })
-export class MovieDetailModule { }
+export class MovieDetailModule {}

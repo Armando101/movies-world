@@ -3,35 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import {
-  MovieCardModule,
-  HeroModule,
-  CircleProgressBarModule,
-  MovieSummaryModule,
-  PersonCardModule,
-  MovieCreditsModule,
-  LoaderModule,
-  HeaderModule,
   FooterModule,
-  NoResultsModule,
+  HeaderModule,
 } from '@olimpo/frontend/onboarding/components';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     RouterModule,
-    MovieCardModule,
-    HeroModule,
-    CircleProgressBarModule,
-    MovieSummaryModule,
-    PersonCardModule,
-    MovieCreditsModule,
-    LoaderModule,
+    HttpClientModule,
+    AppRoutingModule,
     HeaderModule,
     FooterModule,
-    NoResultsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'environment',
+      useValue: environment,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
