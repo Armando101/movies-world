@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { imageCard, imagePath } from '../constants/imageSizes';
 
 @Component({
   selector: 'frontend-movie-card',
@@ -14,6 +15,6 @@ export class MovieCardComponent implements OnChanges {
   image!: string;
 
   ngOnChanges() {
-    this.image = `https://image.tmdb.org/t/p/w220_and_h330_face/${this.imageUrl}`;
+    this.image = `${imagePath}/${imageCard}/${this.imageUrl}`;
   }
 }

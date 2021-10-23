@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { imageHero, imagePath } from '../constants/imageSizes';
 
 @Component({
   selector: 'frontend-hero',
@@ -12,6 +13,6 @@ export class HeroComponent implements OnChanges {
   image!: string;
 
   ngOnChanges() {
-    this.image = `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${this.backdropUrl}`;
+    this.image = `${imagePath}/${imageHero}/${this.backdropUrl}`;
   }
 }

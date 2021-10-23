@@ -43,19 +43,9 @@ export class MovieDetailComponent implements OnInit {
   }
 
   loadCredits() {
-    this.loadCast();
-    this.loadCrew();
-  }
-
-  loadCast() {
-    this.movieService.getMovieCast().subscribe((data) => {
-      this.cast = data;
-    });
-  }
-
-  loadCrew() {
-    this.movieService.getMovieCrew().subscribe((data) => {
-      this.crew = data;
+    this.movieService.getCredits(this.id).subscribe(({ cast, crew }) => {
+      this.cast = cast;
+      this.crew = crew;
     });
   }
 

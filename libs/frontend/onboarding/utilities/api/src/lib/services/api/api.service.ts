@@ -27,7 +27,7 @@ export class ApiService {
   get<T>(
     endpoint: string | IApiEndpoint,
     options = defaultOptions,
-    config = { pipes: true }
+    config = { pipe: '' }
   ): Observable<T> {
     let pathUrl: string;
     if (typeof endpoint === 'string') {
@@ -40,16 +40,17 @@ export class ApiService {
       options.params.api_key = this.environment.apiKey;
     }
 
-    if (config.pipes) {
+    if (config.pipe) {
       return this.addPipe(
-        this.http.get<T>(`${this.baseUrl}/${pathUrl}`, { ...options })
+        this.http.get<T>(`${this.baseUrl}/${pathUrl}`, { ...options }),
+        config.pipe
       );
     } else {
       return this.http.get<T>(`${this.baseUrl}/${pathUrl}`, { ...options });
     }
   }
 
-  addPipe(request: Observable<any>) {
-    return request.pipe(map((response) => response.results));
+  addPipe(request: Observable<any>, pipe: string) {
+    return request.pipe(map((response) => response[pipe]));
   }
 }
