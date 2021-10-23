@@ -24,13 +24,17 @@ export class MovieDetailComponent implements OnInit {
   constructor(
     private movieService: MovieService,
     private route: ActivatedRoute
-  ) {
+  ) {}
+
+  ngOnInit() {
     this.route.params.subscribe((params) => {
       this.id = params.id;
+      window.scroll(0, 0);
+      this.initializeData();
     });
   }
 
-  ngOnInit() {
+  initializeData() {
     this.loadDetails();
     this.loadCredits();
     this.loadRelatedMovies();
@@ -44,13 +48,13 @@ export class MovieDetailComponent implements OnInit {
 
   loadCredits() {
     this.movieService.getCredits(this.id).subscribe(({ cast, crew }) => {
-      this.cast = cast;
-      this.crew = crew;
+      this.cast = cast.slice(0, 50);
+      this.crew = crew.slice(0, 50);
     });
   }
 
   loadRelatedMovies() {
-    this.movieService.getPopularMovies().subscribe((data) => {
+    this.movieService.getSimilarMovies(this.id).subscribe((data) => {
       this.movies = data;
     });
   }

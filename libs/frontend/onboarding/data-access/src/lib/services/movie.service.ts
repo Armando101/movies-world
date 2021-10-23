@@ -39,8 +39,12 @@ export class MovieService {
     });
   }
 
-  getSimilarMovies() {
-    return getPopularMoviesMock();
+  getSimilarMovies(movieId: string) {
+    return this.apiService.get<any>(
+      `movie/${movieId}/similar`,
+      { params: {} },
+      { pipe: 'results' }
+    );
   }
 
   getMoviesBySearch(value: string) {

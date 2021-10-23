@@ -11,7 +11,4 @@
 <frontend-movie-credits [title]="'Movie Crew'" [credits]="crew"></frontend-movie-credits>
 
 <h2>Similar Movies</h2>
-<div class="movie-cards" aria-label="movies grid">
-    <frontend-movie-card *ngFor="let card of movies" [id]="card.id" [title]="card.title" [imageUrl]="card.poster_path"
-        [overview]="card.overview"></frontend-movie-card>
-</div>
+<frontend-cards-panel [movies]="movies"></frontend-cards-panel>

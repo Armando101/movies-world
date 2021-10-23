@@ -9,6 +9,7 @@ import {
   MovieCardModule,
   MovieCreditsModule,
   MovieSummaryModule,
+  CardsPanelModule,
 } from '@olimpo/frontend/onboarding/components';
 @NgModule({
   declarations: [MovieDetailComponent],
@@ -19,6 +20,7 @@ import {
     MovieSummaryModule,
     MovieCreditsModule,
     MovieCardModule,
+    CardsPanelModule,
   ],
   exports: [MovieDetailComponent],
 })

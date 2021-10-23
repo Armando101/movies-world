@@ -1,9 +1,9 @@
 <h3>{{ title }}</h3>
-<div *ngIf="credits.length > 0" class="grid-cards">
+<div *ngIf="credits" class="grid-cards">
     <section class="cards" aria-label="cards credit panel">
         <frontend-person-card *ngFor="let credit of credits" [credit]="credit">
         </frontend-person-card>
     </section>
 </div>
 
-<frontend-no-results *ngIf="credits.length === 0"></frontend-no-results>
+<frontend-no-results *ngIf="credits?.length === 0"></frontend-no-results>
