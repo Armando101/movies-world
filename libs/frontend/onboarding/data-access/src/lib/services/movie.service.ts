@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from '@olimpo/frontend/onboarding/utilities/api';
-import { ICast, ICredits, IMovie } from '../interfaces';
-import { getMovieCrewMock, getPopularMoviesMock } from './mocks/movies.mock';
+import { ICredits, IMovie } from '../interfaces';
 
 @Injectable({
   providedIn: 'root',

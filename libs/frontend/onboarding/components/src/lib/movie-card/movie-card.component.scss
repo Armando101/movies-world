@@ -14,6 +14,7 @@ img,
 .card {
   display: inline-block;
   position: relative;
+  inline-size: 100%;
   @include add-bg-color('text-light');
 }
 
@@ -22,6 +23,8 @@ img {
   background-color: gray;
   display: inline-block;
   text-align: justify;
+  object-fit: cover;
+  inline-size: 100%;
   @include add-shadow(4, 4);
 }
 
