@@ -1,7 +1,11 @@
-import { API_KEY_PROD } from '../config/config';
+declare const process: {
+  env: {
+    API_KEY: string;
+  };
+};
 
 export const environment = {
   production: false,
   baseUrl: `https://api.themoviedb.org/3`,
-  apiKey: API_KEY_PROD,
+  apiKey: process.env.API_KEY,
 };
