@@ -36,9 +36,6 @@ header {
     & img {
       @include add-margin(3, 'margin-inline-start');
     }
-    & .menu {
-      justify-content: start;
-    }
   }
 }
 
