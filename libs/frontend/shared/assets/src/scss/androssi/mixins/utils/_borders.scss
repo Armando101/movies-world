@@ -3,7 +3,7 @@
 // -------
 
 /// Get border radius value
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-borders
 /// @param {number} $radius-key - Border radius key
 /// @example scss - Get a border-radius value of $border-radius-list
@@ -16,7 +16,7 @@
 }
 
 /// Add border radius property
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-borders
 /// @param {number} $radius-key - Border radius key
 /// @require {function} get-border-radius

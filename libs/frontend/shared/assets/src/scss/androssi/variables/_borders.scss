@@ -5,12 +5,11 @@
 // Control the border of elements in this file.
 // the $radius define how rounded the corners will be.
 // Add more values ​​to the map if required.
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-borders
 /// @type number
 $border-radius-base: 1rem !default;
 
-/// @author Armando Rivera <manuel.rivera@kavak.com>
 /// @group basic-borders
 /// @type map
 /// @require {type} $border-radius-base
