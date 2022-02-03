@@ -2,18 +2,16 @@
 // Typography
 // ----------
 
-/// @author Armando Rivera <manuel.rivera@kavak.com>
 /// @group basic-fonts
 /// @type string
 $prefix-font: 'font';
 
-/// @author Armando Rivera <manuel.rivera@kavak.com>
 /// @group basic-fonts
 /// @type string
 $prefix-font-fallback: 'font-fallback';
 
 /// Font families
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type map
 /// @prop {string} 'default' ['Roboto']
@@ -24,7 +22,7 @@ $font-families: (
 );
 
 /// Default fallback fonts (sans-serif)
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type list
 $font-fallback-sans-serif: (
@@ -42,7 +40,7 @@ $font-fallback-sans-serif: (
 );
 
 /// Default fallback fonts (monospace)
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type list
 $font-fallback-monospace: (
@@ -56,7 +54,7 @@ $font-fallback-monospace: (
 );
 
 /// Default fallback fonts
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type list
 $font-fallbacks: (
@@ -69,13 +67,13 @@ $font-fallbacks: (
 // ---------
 
 /// Default font size in rem
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type number
 $font-size-base: 1rem !default;
 
 /// Default font size in pixels
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type number
 $font-size-base-px: 16px !default;
@@ -85,7 +83,7 @@ $font-size-base-px: 16px !default;
 // -----------
 
 /// Default font weights
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type map
 /// @prop {number} 'light' [300]
@@ -104,7 +102,7 @@ $font-weights: (
 // -----------
 
 /// Default line height
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type number
 $line-height-base: 1 !default;
@@ -114,23 +112,17 @@ $line-height-base: 1 !default;
 // ----------------
 
 /// Fonts local path
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type string
 $fonts-path-local: '~libs/frontend/shared/assets/src/fonts/' !default;
-
-/// Fonts external static source
-/// @author Armando Rivera <manuel.rivera@kavak.com>
-/// @group basic-fonts
-/// @type string
-$fonts-path-static: 'https://static.kavak.services/assets/fonts/' !default;
 
 // ---------------------
 // Roboto unicode ranges
 // ---------------------
 
 /// Roboto unicode ranges by language type
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-fonts
 /// @type map
 /// @prop {list} 'cyrillic-ex' [( 'U+0460-052F','U+1C80-1C88', 'U+20B4', ...)]
@@ -203,7 +195,6 @@ $roboto-unicode-ranges: (
 // Font variants
 // -------------
 
-/// @author Juan Ortiz <juan.ortiz@kavak.com>
 /// @group basic-fonts
 /// @type map
 $title-variants: (
@@ -230,7 +221,6 @@ $title-variants: (
   )
 );
 
-/// @author Juan Ortiz <juan.ortiz@kavak.com>
 /// @group basic-fonts
 /// @type map
 $subtitle-variants: (
@@ -243,7 +233,6 @@ $subtitle-variants: (
   )
 );
 
-/// @author Juan Ortiz <juan.ortiz@kavak.com>
 /// @group basic-fonts
 /// @type map
 $text-variants: (
@@ -256,7 +245,6 @@ $text-variants: (
   )
 );
 
-/// @author Juan Ortiz <juan.ortiz@kavak.com>
 /// @group basic-fonts
 /// @type map
 $caption-variants: (
@@ -269,7 +257,6 @@ $caption-variants: (
   )
 );
 
-/// @author Juan Ortiz <juan.ortiz@kavak.com>
 /// @group basic-fonts
 /// @type map
 $font-styles: (

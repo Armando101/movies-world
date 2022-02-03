@@ -9,7 +9,7 @@ $shadow-base: 1rem !default;
 // -------------
 
 /// X Axis
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-shadows
 /// @type number
 /// @prop {number} '0' [0]
@@ -26,7 +26,7 @@ $shadow-sizes-x: (
 );
 
 /// Y Axis
-/// @author Armando Rivera <manuel.rivera@kavak.com>
+
 /// @group basic-shadows
 /// @type number
 /// @prop {number} '0' [0]
@@ -43,7 +43,6 @@ $shadow-sizes-y: (
 );
 
 /// Shadow colors
-/// @author Carlos Serrada <carlos.serrada@kavak.com>
 /// @group basic-shadows
 /// @type number
 /// @since 1.0.0
