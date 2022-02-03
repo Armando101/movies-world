@@ -6,7 +6,7 @@
     "ng": "nx",
     "config": "ts-node ./apps/onboarding/src/assets/setEnv.ts",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "npm run config -- --environment=dev && nx serve",
+    "start": "nx serve",
     "build": "npm run config - --environment=prod && nx build --prod",
     "test": "nx test"
   },
